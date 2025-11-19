@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Defines character encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures proper scaling on mobile devices -->
+    <title>Enquiry Form | Spark Beauty Products</title>
+    <link rel="stylesheet" href="styles.css">
+    
+
+    <!-- SEO meta tags -->
+    <meta name="keywords" content="Spark Beauty Products enquiry, contact form, hair care enquiry, Pretoria beauty store, customer preferences, hobbies">
+    <meta name="description" content="Submit your enquiry to Spark Beauty Products. Share your product preferences, hobbies, and suggestions for new products.">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+         <nav>
+            <ul>
+                <!-- Navigation links to other pages of the website -->
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="contact.html">contact</a></li>
+                <li><a href="location.html">location</a></li>
+                <li><a href="pictures.html">pictures</a></li>
+                <li><a href="enquiry.html">enquiry-form</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Enquiry Form Section -->
+    <section>
+        <h1>Send Us Your Enquiry</h1>
+        <p>We’d love to hear from you! Please fill out the form below and we’ll get back to you soon.</p>
+
+        <form action="/submit-enquiry" method="post" id="enquiry-form">
+            <!-- Full Name input field -->
+            <label for="full-name">Full Name:</label><br>
+            <input type="text" id="full-name" name="full-name" required><br><br>
+
+            <!-- Email Address input field -->
+            <label for="email">Email Address:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <!-- Phone Number input field -->
+            <label for="phone">Phone Number:</label><br>
+            <input type="tel" id="phone" name="phone"><br><br>
+
+            <!-- Dropdown menu for selecting a product of interest -->
+            <label for="product">Product Interested In:</label><br>
+            <select id="product" name="product">
+                <option value="">--Please choose an option--</option>
+                <option value="shampoo">Shampoo</option>
+                <option value="conditioner">Conditioner</option>
+                <option value="hair oil">Hair Oil</option>
+                <option value="hair relaxer">Hair Relaxer</option>
+            </select><br><br>
+
+            <!-- Product Preferences -->
+            <label for="preferences">Your Product Preferences:</label><br>
+            <textarea id="preferences" name="preferences" rows="4" cols="40" placeholder="Tell us what you like in hair care products (e.g., natural ingredients, fragrance, packaging)..."></textarea><br><br>
+
+            <!-- Hobbies -->
+            <label for="hobbies">Your Hobbies:</label><br>
+            <textarea id="hobbies" name="hobbies" rows="3" cols="40" placeholder="Share your hobbies (e.g., fitness, reading, travel)..."></textarea><br><br>
+
+            <!-- Suggestions for new products -->
+            <label for="suggestions">What would you love us to add?</label><br>
+            <textarea id="suggestions" name="suggestions" rows="4" cols="40" placeholder="Suggest new products or services you'd like to see..."></textarea><br><br>
+
+            <!-- General Message -->
+            <label for="message">Your Message:</label><br>
+            <textarea id="message" name="message" rows="6" cols="40" required></textarea><br><br>
+
+            <!-- Submit button -->
+            <button type="submit">Send Enquiry</button>
+        </form>
+    </section> 
+    <!-- Embedded Google Form -->
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfpK64NQUj-NEp4zWWntlvOz8l9kVMnLlHvJL1GoQ3BcKi5fQ/viewform?embedded=true" width="640" height="1546" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
+    <!-- Interactive script -->
+    <script>
+        document.getElementById('enquiry-form').addEventListener('submit', function(event) {
+            alert('Thank you for your enquiry! We appreciate your feedback and will respond shortly.');
+        });
+    </script>
+
+</body>
+</html>

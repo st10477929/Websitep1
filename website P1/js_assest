@@ -1,0 +1,87 @@
+/* ================================
+   sparkBeauty Main JS Asset File
+   ================================ */
+
+// Highlight active navigation link
+document.addEventListener("DOMContentLoaded", () => {
+  const navLinks = document.querySelectorAll("nav a");
+  const currentPath = window.location.pathname.split("/").pop();
+  navLinks.forEach(link => {
+    if (link.getAttribute("href") === currentPath) {
+      link.classList.add("active");
+    }
+  });
+});
+
+// Dynamic greeting (About page)
+function setGreeting() {
+  const hour = new Date().getHours();
+  let message;
+  if (hour < 12) {
+    message = "Good Morning! Welcome to sparkBeauty.";
+  } else if (hour < 18) {
+    message = "Good Afternoon! Shine with sparkBeauty.";
+  } else {
+    message = "Good Evening! Relax with sparkBeauty.";
+  }
+  const greetingDiv = document.getElementById("greeting");
+  if (greetingDiv) greetingDiv.textContent = message;
+}
+window.onload = setGreeting;
+
+// Toggle expandable sections (About page)
+function toggleContent(id) {
+  const section = document.getElementById(id);
+  if (section) {
+    section.style.display = (section.style.display === "block") ? "none" : "block";
+  }
+}
+
+// Gallery filtering (Gallery page)
+document.addEventListener("DOMContentLoaded", () => {
+  const filterButtons = document.querySelectorAll(".filter-bar button");
+  const galleryItems = document.querySelectorAll(".gallery-item");
+
+  filterButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      const filter = button.getAttribute("data-filter");
+      galleryItems.forEach(item => {
+        if (filter === "all" || item.classList.contains(filter)) {
+          item.style.display = "inline-block";
+        } else {
+          item.style.display = "none";
+        }
+      });
+    });
+  });
+});
+
+// Lightbox functionality (Gallery page)
+document.addEventListener("DOMContentLoaded", () => {
+  const lightboxes = document.querySelectorAll(".lightbox");
+  const galleryLinks = document.querySelectorAll(".gallery-item");
+
+  galleryLinks.forEach(link => {
+    link.addEventListener("click", e => {
+      e.preventDefault();
+      const target = document.querySelector(link.getAttribute("href"));
+      if (target) target.style.display = "flex";
+    });
+  });
+
+  lightboxes.forEach(lb => {
+    lb.addEventListener("click", () => {
+      lb.style.display = "none"; // close when clicked
+    });
+  });
+});
+
+// Enquiry form confirmation (Enquiry page)
+document.addEventListener("DOMContentLoaded", () => {
+  const enquiryForm = document.getElementById("enquiry-form");
+  if (enquiryForm) {
+    enquiryForm.addEventListener("submit", () => {
+      alert("Thank you for your enquiry! We’ll respond shortly.");
+    });
+  }
+});

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Character encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive scaling -->
+
+    <!-- SEO meta tags -->
+    <meta name="keywords" content="sparkBeauty, haircare gallery, Pretoria salon, shampoo, conditioner, hair oil, relaxer, beauty studio Gauteng">
+    <meta name="description" content="Explore the sparkBeauty Gallery. View our premium haircare products and salon atmosphere.">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+
+    <title>Gallery - sparkBeauty</title>
+    <link rel="stylesheet" href="styles.css"> <!-- External stylesheet -->
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <!-- Header with navigation -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="location.html">Location</a></li>
+                <li><a href="pictures.html">Pictures</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="enquiry.html">Enquiry Form</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Gallery Section -->
+    <section class="gallery">
+        <h1>Our Gallery</h1>
+        <p>Explore our premium products and salon atmosphere.</p>
+
+        <!-- Filter Bar -->
+        <div class="filter-bar">
+            <button data-filter="all">All</button>
+            <button data-filter="products">Products</button>
+            <button data-filter="salon">Salon</button>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="gallery-grid">
+            <!-- Products -->
+            <a href="#img1" class="gallery-item products"><img src="images/hair shampoo.jpeg" alt="Luxury Shampoo"></a>
+            <a href="#img2" class="gallery-item products"><img src="images/conditioner.jpeg" alt="Luxury Conditioner"></a>
+            <a href="#img3" class="gallery-item products"><img src="images/full package products.jpg" alt="Hair Oil"></a>
+
+            <!-- Salon -->
+            <a href="#img4" class="gallery-item salon"><img src="images/trio products.jpeg" alt="SparkBeauty Studio Interior"></a>
+        </div>
+    </section>
+
+    <!-- Lightbox Modals -->
+    <div id="img1" class="lightbox">
+        <img src="images/hair shampoo.jpeg" alt="Luxury Shampoo">
+    </div>
+    <div id="img2" class="lightbox">
+        <img src="images/conditioner.jpeg" alt="Luxury Conditioner">
+    </div>
+    <div id="img3" class="lightbox">
+        <img src="images/full package products.jpg" alt="Hair Oil">
+    </div>
+    <div id="img4" class="lightbox">
+        <img src="images/trio products.jpeg" alt="SparkBeauty Studio Interior">
+    </div>
+
+    <!-- Call to Action -->
+    <div>
+        <a href="enquiry.html" class="cta-button">Send Us Your Enquiry</a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 sparkBeauty | Follow us on 
+            <a href="https://www.instagram.com/sparkBeauty">Instagram</a> & 
+            <a href="https://www.facebook.com/sparkBeauty">Facebook</a>
+        </p>
+    </footer>
+
+    <!-- jQuery for Filtering -->
+    <script>
+        $(document).ready(function(){
+            $(".filter-bar button").click(function(){
+                const filter = $(this).attr("data-filter");
+                if(filter === "all"){
+                    $(".gallery-item").show();
+                } else {
+                    $(".gallery-item").hide();
+                    $("." + filter).show();
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
