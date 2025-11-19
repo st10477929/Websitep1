@@ -1,6 +1,6 @@
 # 💇‍♀️ SparkBeauty Responsive Website
 
-Welcome to the official SparkBeauty website — a sleek, mobile-friendly platform designed to showcase our hair care products and services. Built with HTML and CSS, this site adapts beautifully across devices to ensure a seamless experience for every visitor.
+Welcome to the official SparkBeauty website — a sleek, mobile-friendly platform designed to showcase our hair care products and services. Built with **HTML, CSS, and JavaScript**, this site adapts beautifully across devices to ensure a seamless experience for every visitor.
 
 ---
 
@@ -12,6 +12,11 @@ Welcome to the official SparkBeauty website — a sleek, mobile-friendly platfor
 - **Responsive Images**: Optimized with `picture`, `srcset`, and `sizes` attributes.
 - **Clean Navigation**: Horizontal menu on desktop, stacked layout on mobile.
 - **Accessible Typography**: Readable fonts, consistent spacing, and contrast-aware colors.
+- **SEO Meta Tags**: Added `keywords`, `description`, and `viewpoint` for better search engine optimization.
+- **Interactive Elements**: Navigation hover effects, expandable sections, dynamic greetings, and form alerts.
+- **Central JS Asset File**: `assets/js/main.js` consolidates all scripts (nav highlighting, gallery filtering, lightbox, enquiry form confirmation).
+- **Gallery Page**: Includes filter bar (Products / Salon), lightbox modals, and jQuery integration.
+- **Enquiry Form**: Collects customer details, product preferences, hobbies, and suggestions for new products.
 
 ---
 
@@ -42,6 +47,9 @@ Tested using Chrome DevTools and Firefox Responsive Mode across the following de
 - Refined image scaling using `object-fit` and `max-width`.
 - Improved navigation layout for tablet breakpoint.
 - Enhanced section padding and layout flow for desktop view.
+- Added enquiry form fields for preferences, hobbies, and suggestions.
+- Implemented gallery filter bar with jQuery for category sorting.
+- Created central JS asset file for all interactive features.
 
 ---
 
@@ -66,4 +74,9 @@ Gauteng, South Africa
 
 Ready for a new look?  
 [Contact us](contact.html) or call us at **+27 12 345 6789**.
-# Websitep1
+
+---
+
+## 📂 website 1
+
+
